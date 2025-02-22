@@ -1,6 +1,6 @@
 # 4-to-1-Multiplexer
-Here it is from the combinational logic circuit example multiplexer (a device that selects between a number of input signals)  Depending on the values of the selection lines (s1, s0), it routes one of the input data signals (d0, d1, d2, d3) to the output (y).
 
+Here it is from the combinational logic circuit example multiplexer (a device that selects between a number of input signals)  Depending on the values of the selection lines (s1, s0), it routes one of the input data signals (d0, d1, d2, d3) to the output (y).
 
 RTL CODE:
 module mux4to1 (
@@ -18,7 +18,6 @@ always @(*) begin
         default: y = 1'b0;  
     endcase
 end
-
 endmodule
 
 TESTBENCH CODE:
@@ -61,5 +60,4 @@ initial
     $display("s1 = %b, s0 = %b, y = %b (Expected y = d0)", s1, s0, y); 
     $finish;
   end
-
 endmodule
